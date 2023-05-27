@@ -1,0 +1,26 @@
+
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: TeorVero_development
+  username: <%= ENV["TEORVERO_DEV_DATABASE_USERNAME"] %>
+  password: <%= ENV["TEORVERO_DEV_DATABASE_PASSWORD"] %>
+
+test:
+  <<: *default
+  database: TeorVero_test
+  username: <%= ENV["TEORVERO_DEV_DATABASE_USERNAME"] %>
+  password: <%= ENV["TEORVERO_DEV_DATABASE_PASSWORD"] %>
+
+production:
+  <<: *default
+  database: TeorVero_production
+  username: TeorVero
+  password: <%= ENV["TEORVERO_DATABASE_PASSWORD"] %>
