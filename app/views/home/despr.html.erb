@@ -1,0 +1,84 @@
+<div align=" center ">
+
+  <div style="border: 5px ridge #aa2256;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 0px;
+    font-size: 30px;
+    font-family: Arial;">
+
+    <p class="zagl">
+      Дисперсия
+
+    </p>
+    <p class="text">
+      Определение:
+      Диспе́рсия случа́йной величины́ — мера разброса значений случайной величины относительно её математического ожидания.
+
+    </p>
+    <p class="text">
+      Принимает вид: D(X).
+
+    </p>
+
+    <p class="text">
+      Свойства дисперсии:
+
+    </p>
+    <p class="text">
+
+      1) D(c)=0 c=constant
+
+    </p>
+    <p class="text">
+      2) D(X+Y)=D(X)+D(Y)
+
+    </p>
+    <p class="text">
+      3) D(X*c)=D(X)*c^2 c=constant
+
+    </p>
+    <p class="text">
+      Формула дисперсии: D(X)=M(X^2)-M(X)^2, где M = математическое ожидание,
+
+    <p class="text">
+      Пример расчета дисперсии с помошью нашего гема TeorVero
+
+    </p>
+    <p class="text">
+
+      D(X)=<%= "#{@users} " %>, где
+      M(X)=<%= "#{@wishes} " %>
+      X=[1,2,3], P=[0.1,0.2,0.7]
+    </p>
+
+
+
+
+
+
+    <div class="tabl">
+
+      <div class="twomore">
+        <%=button_to  'Математическое ожидание',  '/matoj', method: :get %>
+      </div>
+      <div class="left">
+
+        <%=button_to  'Квадратическое отклонение',  '/kvadr', method: :get %>
+      </div>
+      <div class="right">
+        <%=button_to  'Функция распределения',  '/func', method: :get %>
+      </div>
+    </div>
+    <div class="cl">
+
+
+      <%=button_to  'Вернуться на главную',  '/window', method: :get %>
+    </div>
+
+    <div class="bb">
+      <%=button_to  'Умоляю верните меня на страничку с красивой girl, теория вероятностей такая нудная',  '/index', method: :get %>
+    </div>
+  </div>
+
+</div>

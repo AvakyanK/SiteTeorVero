@@ -4,6 +4,8 @@ Dependencies:
 - Ruby 3.2
 - PostgreSQL
 - Node.js
+- TeorVero
+
 
 Fill credentials in `.env` file as
 ```
@@ -13,6 +15,8 @@ TEORVERO_DEV_DATABASE_PASSWORD=your_postgres_password
 
 Install dependencies:
 ```bash
+git clone https://github.com/AvakyanK/TeorVer.git 
+gem install TeorVero
 bundle install
 npm install
 ```

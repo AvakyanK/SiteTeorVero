@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    TeorVero (0.1.0)
     actioncable (7.0.4.3)
       actionpack (= 7.0.4.3)
       activesupport (= 7.0.4.3)
@@ -216,6 +217,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  TeorVero (~> 0.1.0)
   bootsnap
   capybara
   cssbundling-rails
