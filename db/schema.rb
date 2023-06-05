@@ -10,21 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_28_125524) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_30_195819) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "name", null: false
+    t.string "pass_word", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "wishes", force: :cascade do |t|
     t.string "name", null: false
-    t.string "sender_name"
-    t.text "description"
+    t.string "iks"
+    t.string "vero"
+    t.string "answer"
     t.bigint "wishlist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,7 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_125524) do
 
   create_table "wishlists", force: :cascade do |t|
     t.string "name", null: false
-    t.string "path", null: false
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

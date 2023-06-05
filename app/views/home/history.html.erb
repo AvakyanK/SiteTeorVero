@@ -1,0 +1,29 @@
+
+<div align=" center ">
+  <div class="win">
+    <p class="zagl">
+      History
+
+    </p>
+<ul>
+  <%- @wishes.each do |user| %>
+    <li>
+      <div class ="tabl">
+
+      <%= if @users == user.user_id
+          " Solve #{user.wishes[0].name} with X = #{user.wishes[0].iks},
+      P = #{user.wishes[0].vero}, where Answer = #{user.wishes[0].answer} "
+          end
+      %>
+
+
+      </div>
+
+    </li>
+  <% end %>
+</ul>
+
+
+  </div>
+
+</div>

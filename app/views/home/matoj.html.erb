@@ -1,93 +1,75 @@
 <div align=" center ">
-
-  <div style="border: 5px ridge #aa2256;
-    background: #FFFFFF;
-    padding: 15px;
-    border-radius: 0px;
-    font-size: 30px;
-    font-family: Arial;">
-
+  <div class="win">
     <p class="zagl">
-      Математическое ожидание
+      Calculator
 
     </p>
-    <p class="text">
-      Определение:
-      Математи́ческое ожида́ние — понятие в теории вероятностей, означающее среднее (взвешенное по вероятностям возможных значений) значение случайной величины. В случае непрерывной случайной величины подразумевается взвешивание по плотности распределения (более строгие определения см. ниже). Математическое ожидание случайного вектора равно вектору,
-      компоненты которого равны математическим ожиданиям компонентов случайного вектора.
-
-    </p>
-    <p class="text">
-      Принимает вид: M(X).
-
-    </p>
-
-    <p class="text">
-      Свойства математического ожидания:
-
-    </p>
-    <p class="text">
-
-      1) M(c)=c c=constant
-
-    </p>
-    <p class="text">
-      2) M(X+Y)=M(X)+M(Y)
-
-    </p>
-    <p class="text">
-      3) M(X*c)=M(X)*c c=constant
-
-    </p>
-    <p class="text">
-      4) M(X*Y)=M(X)*M(Y)
-
-    </p>
-    <p class="text">
-      Формула математического ожидания: M(X)=sum(xi*pi,i=1...infinity), где xi=случайное значение,
-
-    </p>
-    <p class="text">
-      а pi=соответсвующая ему вероятность, причем сумма вероятностей обязана равняться единице
-
-    </p>
-    <p class="text">
-      Пример расчета математического ожидания с помошью нашего гема TeorVero
-
-    </p>
-    <p class="text">
-
-      M(X)=<%= "#{@users} " %>
-      X=[1,2,3], P=[0.1,0.2,0.7]
-    </p>
-
-
-
-
-
 
     <div class="tabl">
 
-      <div class="twomore">
-        <%=button_to  'Дисперсия',  '/despr', method: :get %>
+        <p class="text-block">
+
+          <code>matojid</code> - Расчитывает математическое ожидание с заданными случайными значениями и их вероятностями
+        </p>
+        <p class="text-block">
+          <code>dispersion</code> - Расчитывает дисперсию с заданными случайными значениями и их вероятностями
+        </p>
+
+
+        <p class="text-block">
+
+          <code>funcdistr</code> - Расчитывает Функцию распределения с заданными случайными значениями и их вероятностями
+        </p>
+        <p class="text-block">
+
+          <code>kvadrdev</code> - Расчитывает квадратное отклонение с заданными случайными значениями и их вероятностями
+        </p>
+
+
+    </div>
+
+    <div class ="tabl">
+      <div class ="login">
+        <%= form_tag('/answer') do -%>
+          <p class="text">
+            Function
+          </p>
+          <div class='form-field'>
+            <%=label_tag 'name', '' %>
+            <%=text_field_tag 'func[name]'%>
+          </div>
+          <p class="text">
+            X
+          </p>
+          <div class='form-field'>
+            <%=label_tag 'iks', '' %>
+            <%=text_field_tag 'func[iks]'%>
+          </div>
+          <p class="text">
+            P
+          </p>
+          <div class='form-field'>
+            <%=label_tag 'vero', '' %>
+            <%=text_field_tag 'func[vero]'%>
+          </div>
+          <div class='form-field'>
+            <%= submit_tag 'Calculate' %>
+          </div>
+
+        <% end -%>
+
       </div>
-      <div class="left">
 
-        <%=button_to  'Квадратическое отклонение',  '/kvadr', method: :get %>
-      </div>
-      <div class="right">
-        <%=button_to  'Функция распределения',  '/func', method: :get %>
-      </div>
-    </div>
-    <div class="cl">
-
-
-      <%=button_to  'Вернуться на главную',  '/window', method: :get %>
     </div>
 
-    <div class="bb">
-    <%=button_to  'Умоляю верните меня на страничку с красивой girl, теория вероятностей такая нудная',  '/index', method: :get %>
-    </div>
-    </div>
+    <%=button_to  'Вернуться на главную',  '/index', method: :get %>
+    <%=button_to  'История',  '/history', method: :get %>
 
+
+
+
+
+
+
+  </div>
 </div>

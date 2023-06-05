@@ -1,23 +1,41 @@
 
 <div align=" center ">
 
-  <div style="border: 4px ridge #aa0000;
-    background: #F6E2D1;
-    padding: 25px;
-    border-radius: 17px;
-    font-size: 30px;
-    font-family: Arial;">
-  <p class="text-block">
-    Добро пожаловать на наш сайт по теории вероятностей.
-    Если желаете продолжить с нами сотрудничество предлагаем перейти на следущую страницу)
-  </p>
+  <div class="win">
 
-
-    <div class="gif-wrapper">
-      <h1 class="landing-title"> </h1>
+    <div class ="tabl">
+    <div class ="login">
+      <%= form_tag('/solve') do -%>
+      <p class="text">
+        Email
+      </p>
+      <div class='form-field'>
+        <%=label_tag 'email', '' %>
+        <%=text_field_tag 'user[email]'%>
+      </div>
+      <p class="text">
+        Password
+      </p>
+      <div class='form-field'>
+        <%=label_tag 'password', '' %>
+        <%=text_field_tag 'user[password]'%>
+      </div>
+        <div class='form-field'>
+          <%= submit_tag 'Log in' %>
+        </div>
+      <% end -%>
+    </div>
     </div>
 
-  <%=button_to  'Нажать вот сюда',  '/window', method: :get %>
+
+    <p class="text-block">
+
+      Новый пользователь?
+      <%=button_to  'Sign up',  '/window', method: :get%>
+    </p>
+
+
+
 </div>
 
 </div>

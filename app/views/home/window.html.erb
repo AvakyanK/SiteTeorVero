@@ -1,71 +1,41 @@
 
 <div align=" center ">
 
-  <div style="border: 5px ridge #aa0000;
-    background: #F6E2D1;
-    padding: 15px;
-    border-radius: 0px;
-    font-size: 30px;
-    font-family: Arial;">
+  <div class="win">
 
 
-
-
-  <h1>О мой бог вы все же решились на это &#128552;</h1>
-
-  <p class="text-block">
-    Ладно пришла пора действовать решительно.
-    Думаю сначала нам нужно объяснить, на что мы способны и что можем вам предоставить
-  </p>
-    <div class="gif-coc">
-      <h1 class="landing-title"> </h1>
-    </div>
-  <p class="text-block">
-    На ваш выбор есть несколько характеристик, использующихся в Теории вероятностей:
-  </p>
-
-
-    <div class="tabl">
-      <div class="left">
-        <p class="text-block">
-
-          <code>matojid</code> - Расчитывает математическое ожидание с заданными случайными значениями и их вероятностями
-        </p>
-        <p class="text-block">
-          <code>dispersion</code> - Расчитывает дисперсию с заданными случайными значениями и их вероятностями
-        </p>
+    <div class ="tabl">
+      <div class ="login">
+        <%= form_tag('/solvesign') do -%>
+      <p class="text">
+        Name
+      </p>
+      <div class='form-field'>
+        <%=label_tag 'name', '' %>
+        <%=text_field_tag 'user[name]'%>
       </div>
-      <div class="right">
-        <p class="text-block">
-
-          <code>funcdistr</code> - Расчитывает Функцию распределения с заданными случайными значениями и их вероятностями
-        </p>
-        <p class="text-block">
-
-          <code>kvadrdev</code> - Расчитывает квадратное отклонение с заданными случайными значениями и их вероятностями
-        </p>
+      <p class="text">
+        Email
+      </p>
+      <div class='form-field'>
+        <%=label_tag 'email', '' %>
+        <%=text_field_tag 'user[email]'%>
+      </div>
+      <p class="text">
+        Password
+      </p>
+      <div class='form-field'>
+        <%=label_tag 'password', '' %>
+        <%=text_field_tag 'user[password]'%>
+      </div>
+      <div class='form-field'>
+        <%= submit_tag 'Sign up' %>
       </div>
 
-    </div>
-
-
-    <p class="text-block">
-
-    </p>
-
-  <p class="text-block">
-    Далее мы подробно расскажем об каждой из описанных нами ранее характеристик.&#128540;
-  </p>
-    <div class="tabl">
-    <div class="onemore">
-
-    <%=button_to  'Перейти на страницу характеристик теории вероятностей',  '/solve', method: :get %>
-    </div>
-    <div class="twomore">
-    <%=button_to  'Верните меня на страничку с красивой girl, приказываю',  '/index', method: :get %>
-    </div>
-    </div>
-  <!--Подходящее место для формы-->
+    <% end -%>
+  </div>
   </div>
 
+
+</div>
 </div>
