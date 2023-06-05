@@ -24,3 +24,4 @@ production:
   database: TeorVero_production
   username: TeorVero
   password: <%= ENV["TEORVERO_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
